@@ -1,0 +1,21 @@
+"""LoL stats tracker - 2024-04-06 update #461"""
+class LoLTracker:
+    def __init__(self):
+        self.ranked_games = []
+        self.summoner = "NeoLi123"
+
+    def record_game(self, lane, champion, won, kda):
+        game = {
+            "lane": lane,
+            "champion": champion,
+            "won": won,
+            "kda": kda,
+            "date": "2024-04-06",
+            "game_id": 461
+        }
+        self.ranked_games.append(game)
+        return game
+
+tracker = LoLTracker()
+tracker.record_game("MID", "Ahri", True, {"kills": 464, "deaths": 461, "assists": 463})
+print(f"Game 461 recorded")
