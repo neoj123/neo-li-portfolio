@@ -27,7 +27,7 @@ export default function Hero() {
           Hi, I'm <span className="gradient-text">Neo Li</span>
         </h1>
         <h2 className="hero-subtitle">
-          Software Engineer @ Microchip &bull; 3rd Year{' '}
+          Prev @ Microchip &bull; 3rd Year{' '}
           <span className="gradient-text">Computer Engineer</span> at UofT
         </h2>
         <p className="hero-bio">
