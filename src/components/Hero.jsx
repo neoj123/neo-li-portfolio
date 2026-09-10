@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 
 export default function Hero() {
-  const [visible, setVisible] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    setVisible(true);
     const handleMouseMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
@@ -19,7 +17,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className={`hero-section ${visible ? 'visible' : ''}`}>
+    <section id="hero" className="hero-section">
       <div className="hero-glow" style={glowStyle} />
       <div className="hero-content">
         <div className="hero-tag">
@@ -38,11 +36,14 @@ export default function Hero() {
           software engineering.
         </p>
         <div className="hero-buttons">
-          <a href="#projects" className="btn-primary">
+          <a href="#/projects" className="btn-primary">
             View My Work
           </a>
-          <a href="#contact" className="btn-secondary">
+          <a href="#/contact" className="btn-secondary">
             Get In Touch
+          </a>
+          <a href={`${import.meta.env.BASE_URL}resume.pdf`} className="btn-secondary" target="_blank" rel="noopener noreferrer">
+            Resume
           </a>
         </div>
       </div>

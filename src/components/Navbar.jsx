@@ -1,38 +1,45 @@
-import { useState } from 'react';
-import { Link } from 'react-scroll';
+import { useEffect, useState } from 'react';
 
-export default function Navbar() {
+export default function Navbar({ currentPath, onNavigate, resumeHref }) {
   const [scrolled, setScrolled] = useState(false);
 
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 50);
-  };
-
-  window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 30);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const links = [
-    { to: 'hero', label: 'Home' },
-    { to: 'about', label: 'About' },
-    { to: 'experience', label: 'Experience' },
-    { to: 'projects', label: 'Projects' },
-    { to: 'skills', label: 'Skills' },
-    { to: 'contact', label: 'Contact' },
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
+    { to: '/experience', label: 'Experience' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/skills', label: 'Skills' },
+    { to: '/contact', label: 'Contact' },
   ];
 
   return (
     <nav className={scrolled ? 'nav scrolled' : 'nav'}>
-      <div className="nav-logo">
+      <a href="#/" className="nav-logo" onClick={(event) => onNavigate(event, '/')}>
         <span className="logo-text">neo</span>
         <span className="logo-accent">li</span>
-      </div>
+      </a>
       <ul className="nav-links">
         {links.map((link) => (
           <li key={link.to}>
-            <Link to={link.to} smooth={true} duration={500} offset={-70}>
+            <a
+              href={`#${link.to}`}
+              className={currentPath === link.to ? 'active' : ''}
+              onClick={(event) => onNavigate(event, link.to)}
+            >
               {link.label}
-            </Link>
+            </a>
           </li>
         ))}
+        <li>
+          <a href={resumeHref} target="_blank" rel="noopener noreferrer">Resume</a>
+        </li>
       </ul>
     </nav>
   );

@@ -1,4 +1,22 @@
 export default function About() {
+  const interests = [
+    {
+      title: 'Pianist',
+      text: 'Classical training and regular practice keep me sharp, patient, and detail-oriented.',
+      image: 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=900&q=80',
+    },
+    {
+      title: 'Gamer at heart',
+      text: 'Valorant Immortal 3, League Diamond 4, Overwatch Masters, and Brawlhalla Diamond Top 1000 NA East.',
+      image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80',
+    },
+    {
+      title: 'Traveller',
+      text: 'China, Taiwan, the United States, the Mediterranean, Peru, and many more places still on the list.',
+      image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=900&q=80',
+    },
+  ];
+
   return (
     <section id="about" className="about-section">
       <div className="section-header">
@@ -24,6 +42,11 @@ export default function About() {
             BOTE consulting team. I believe in writing code that matters — code
             that solves real problems and scales with purpose.
           </p>
+          <p>
+            Outside engineering, I'm a pianist, traveller, and competitive video
+            game player. I like hobbies that reward consistency, fast learning,
+            and reading the room under pressure.
+          </p>
           <div className="about-facts">
             <div className="fact">
               <span className="fact-number">23+</span>
@@ -39,6 +62,17 @@ export default function About() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="interests-grid">
+        {interests.map((interest) => (
+          <article key={interest.title} className="interest-card glow-card">
+            <img src={interest.image} alt="" loading="lazy" />
+            <div>
+              <h3>{interest.title}</h3>
+              <p>{interest.text}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
