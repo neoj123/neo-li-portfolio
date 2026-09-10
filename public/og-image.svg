@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Neo Li portfolio preview">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1200" y1="0" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b1020" />
+      <stop offset="0.55" stop-color="#111827" />
+      <stop offset="1" stop-color="#172554" />
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientTransform="translate(230 125) rotate(42) scale(520 360)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6" stop-opacity="0.55" />
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientTransform="translate(955 180) rotate(130) scale(430 310)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glowA)" />
+  <rect width="1200" height="630" fill="url(#glowB)" />
+  <rect x="78" y="78" width="1044" height="474" rx="42" fill="#0f172a" fill-opacity="0.74" stroke="#94a3b8" stroke-opacity="0.2" />
+  <rect x="118" y="118" width="92" height="92" rx="26" fill="#0f172a" stroke="#c4b5fd" stroke-opacity="0.7" />
+  <path d="M139 181v-45h9.6l28.8 30.2V136h9.6v45h-9.6L148.6 150.8V181H139Z" fill="#f8fafc" />
+  <text x="118" y="298" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="78" font-weight="800" letter-spacing="-3">Neo Li</text>
+  <text x="118" y="368" fill="#cbd5e1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="600">Computer Engineering • AI • Software Systems</text>
+  <text x="118" y="432" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="27">Portfolio of engineering work, gaming analytics projects, and experience.</text>
+  <text x="118" y="500" fill="#7dd3fc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="3">NEOJLI.COM</text>
+</svg>
